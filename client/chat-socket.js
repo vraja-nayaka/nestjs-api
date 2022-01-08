@@ -1,4 +1,5 @@
-const socket = io('http://localhost:3000');
+// const socket = io('http://localhost:3000');
+const socket = io('http://backend-nestjs-books.herokuapp.com/');
 
 const message = document.getElementById('message');
 const messages = document.getElementById('messages');

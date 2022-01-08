@@ -1,23 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+  <body style="margin:0; padding:0">
+    <div id="container" style="position: relative; height:100vh; width:100vw; padding:10px; box-sizing: border-box;">
+      <div>
+        <ul id="messages"></ul>
+      </div>
 
-<body>
-  <div>
-    <ul id="messages"></ul>
-  </div>
+      <div>
+        <input id="message" type="text" />
+        <button onclick="handleSubmitNewMessage()">Submit</button>
+        <button onclick="handleSubmitCursorChange()">Cursor</button>
+      </div>
+    </div>
 
-  <div>
-    <input id="message" type="text" />
-    <button onclick="handleSubmitNewMessage()">Submit</button>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js"></script>
-  <script src="./chat-socket.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js"></script>
+    <script src="./chat-socket.js"></script>
+    <script src="./cursor-socket.js"></script>
+  </body>
 </html>
