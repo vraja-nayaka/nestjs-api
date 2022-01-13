@@ -1,5 +1,6 @@
 # keys
 .env
+firebase-adminsdk.json
 
 # compiled output
 /dist

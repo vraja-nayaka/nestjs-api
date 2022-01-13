@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import { FirebaseModule } from 'nestjs-firebase';
 import { TelegrafModule } from 'nestjs-telegraf';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -15,6 +16,9 @@ import { CursorGateway } from './cursor.gateway';
       include: [AppUpdate],
     }),
     AppUpdate,
+    FirebaseModule.forRoot({
+      googleApplicationCredential: 'firebase-adminsdk.json',
+    }),
   ],
   controllers: [AppController],
   providers: [AppService, ChatGateway, CursorGateway],
